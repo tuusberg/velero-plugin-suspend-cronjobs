@@ -1,0 +1,10 @@
+{
+  "plugin_name": "velero-plugin-suspend-cronjobs",
+  "context": ".",
+  "image": "velero/velero-plugin-suspend-cronjobs",
+  "live_reload_deps": [
+    "internal",
+    "main.go"
+  ],
+  "go_main": "."
+}

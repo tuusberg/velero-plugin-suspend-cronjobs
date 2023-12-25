@@ -1,0 +1,9 @@
+_output
+velero-plugin-example
+
+.go
+
+_tiltbuild
+
+# JetBrains IDE metadata
+.idea
