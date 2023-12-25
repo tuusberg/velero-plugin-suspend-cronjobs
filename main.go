@@ -24,13 +24,8 @@ import (
 
 func main() {
 	framework.NewServer().
-		RegisterRestoreItemAction("example.io/restore-plugin", newRestorePlugin).
 		RegisterRestoreItemActionV2("example.io/restore-pluginv2", newRestorePluginV2).
 		Serve()
-}
-
-func newRestorePlugin(logger logrus.FieldLogger) (interface{}, error) {
-	return plugin.NewRestorePlugin(logger), nil
 }
 
 func newRestorePluginV2(logger logrus.FieldLogger) (interface{}, error) {
