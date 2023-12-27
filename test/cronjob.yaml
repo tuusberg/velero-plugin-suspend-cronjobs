@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cardinal-dea-updater
+spec:
+  concurrencyPolicy: Forbid
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: dea-updater
+              image: quay.io/chronicled/dea-updater:6faf816
+              imagePullPolicy: IfNotPresent
+
+  schedule: 0 10 * * *
+  successfulJobsHistoryLimit: 3
+  suspend: true
