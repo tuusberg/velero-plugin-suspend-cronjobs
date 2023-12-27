@@ -18,7 +18,7 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"github.com/vmware-tanzu/velero-plugin-example/internal/plugin"
+	"github.com/tuusberg/velero-plugin-suspend-cronjobs/internal/plugin"
 	"github.com/vmware-tanzu/velero/pkg/plugin/framework"
 )
 

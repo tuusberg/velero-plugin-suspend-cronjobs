@@ -1,4 +1,4 @@
-module github.com/vmware-tanzu/velero-plugin-example
+module github.com/tuusberg/velero-plugin-suspend-cronjobs
 
 go 1.21
 
