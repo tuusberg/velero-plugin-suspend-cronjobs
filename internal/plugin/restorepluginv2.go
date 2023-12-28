@@ -47,9 +47,9 @@ func (p *RestorePluginV2) Execute(input *velero.RestoreItemActionExecuteInput) (
 		return nil, err
 	}
 
+	// This is where the job gets suspended:
 	p.log.Infof("CronJob %s/%s will be suspended", cronJob.Namespace, cronJob.Name)
-	// This is where the job gets suspended.
-	cronJob.Spec.Suspend = boolPointer(!true) // TODO: set to true
+	cronJob.Spec.Suspend = boolPointer(true)
 
 	// Convert the CronJob back to unstructured data:
 	cronJobUnstructured, err := runtime.DefaultUnstructuredConverter.ToUnstructured(&cronJob)
