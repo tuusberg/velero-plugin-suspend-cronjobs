@@ -22,6 +22,11 @@ This builds an image tagged as `github.com/tuusberg/velero-plugin-suspend-cronjo
 $ IMAGE=your-repo/your-name VERSION=your-version-tag make container 
 ```
 
+To push the image to a Docker repository, run
+```bash
+$ make push
+```
+
 ## Deploying the plugin
 
 To deploy your plugin image to an Velero server:
