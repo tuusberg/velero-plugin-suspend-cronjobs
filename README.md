@@ -2,8 +2,6 @@
 
 Automatically suspend Kubernetes CronJobs prior to restoring them into a cluster.
 
-![Build Status][1]
-
 ## Building the plugin
 
 To build the plugin, run
