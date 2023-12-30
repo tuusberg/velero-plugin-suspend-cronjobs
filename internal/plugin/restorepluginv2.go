@@ -37,7 +37,7 @@ func (p *RestorePluginV2) AppliesTo() (velero.ResourceSelector, error) {
 }
 
 // Execute allows the RestorePlugin to perform arbitrary logic with the item being restored,
-// in this case, setting a custom annotation on the item being restored.
+// in this case, suspending the CronJob being restored.
 func (p *RestorePluginV2) Execute(input *velero.RestoreItemActionExecuteInput) (*velero.RestoreItemActionExecuteOutput, error) {
 	// Since the resource selector we defined in AppliesTo() only matches
 	// CronJob resources, we can safely cast the input.Item to a *v1.CronJob.
