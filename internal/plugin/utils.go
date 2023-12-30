@@ -1,5 +1,5 @@
 package plugin
 
-func boolPointer(b bool) *bool {
-	return &b
+func Pointer[T any](v T) *T {
+	return &v
 }

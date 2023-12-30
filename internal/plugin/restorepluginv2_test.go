@@ -40,7 +40,7 @@ func TestRestorePluginV2_Execute(t *testing.T) {
 			},
 			Spec: batchv1.CronJobSpec{
 				Schedule: "0 0 * * *",
-				Suspend:  boolPointer(false),
+				Suspend:  Pointer(false),
 			},
 		}
 
