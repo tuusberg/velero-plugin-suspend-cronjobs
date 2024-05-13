@@ -29,7 +29,7 @@ $ make push
 
 ## Deploying the plugin
 
-To deploy your plugin image to an Velero server:
+To deploy your plugin image to a Velero server:
 
 ### Using Velero CLI
 1. Make sure your image is pushed to a registry that is accessible to your cluster's nodes.
